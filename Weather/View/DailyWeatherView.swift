@@ -16,7 +16,8 @@ struct DailyWeatherView: View {
             DailyWeatherCellView(day: "Tuesday")
             DailyWeatherCellView(day: "Wednesday")
             DailyWeatherCellView(day: "Thursday")
-        }
+            DailyWeatherCellView(day: "Friday")
+            DailyWeatherCellView(day: "Saturday")        }
     }
 }
 

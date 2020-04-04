@@ -28,9 +28,6 @@ struct DailyWeatherCellView: View {
         }.padding(
             .init(arrayLiteral:.leading,.trailing),
             24
-        ).padding(
-            .init(arrayLiteral: .top, .bottom),
-            4
         )
     }
 }

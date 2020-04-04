@@ -12,7 +12,13 @@ struct HourlyWeatherCellView: View {
     var body: some View {
         VStack {
             Text("08")
-            Text(" ")
+            Text("50%")
+                .font(.system(size: 12))
+                .foregroundColor(
+                    .init(red: 127/255,
+                          green: 1,
+                          blue: 212/255)
+                )
             Image("WeatherIcon")
                 .resizable()
                 .aspectRatio(UIImage(named: "WeatherIcon")!.size, contentMode: .fit)

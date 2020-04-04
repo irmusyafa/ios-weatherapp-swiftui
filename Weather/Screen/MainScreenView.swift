@@ -15,7 +15,8 @@ struct ContentView: View {
             
             VStack {
                 LocationAndTemperatureHeaderView()
-                
+                Spacer()
+
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
                         DailyWeatherCellView(day: "Today")
@@ -28,7 +29,6 @@ struct ContentView: View {
                         Rectangle().frame(height: 1)
                     }
                 }
-
                 Spacer()
             }
         }.colorScheme(.dark)

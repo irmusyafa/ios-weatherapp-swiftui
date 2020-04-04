@@ -16,7 +16,6 @@ struct LocationAndTemperatureHeaderView: View {
             Text("Serpong")
                 .font(.largeTitle)
                 .fontWeight(.medium)
-                .padding(.top, 32)
             Text("Partly Cloudy")
                 .font(.body)
                 .fontWeight(.light)
@@ -25,5 +24,6 @@ struct LocationAndTemperatureHeaderView: View {
                 .font(.system(size: 86))
                 .fontWeight(.thin)
         }
+        .padding(.init(arrayLiteral: .top, .bottom), 24)
     }
 }
