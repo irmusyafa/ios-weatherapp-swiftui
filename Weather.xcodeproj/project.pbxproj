@@ -198,7 +198,6 @@
 		ECBF87B9242AEE1B0004638B /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				EC481E692439CBCA00454911 /* Utilities */,
 				ECBF87C8242AEE1D0004638B /* Info.plist */,
 				EC775B79243054B60051F63E /* App */,
 				EC775B75243054440051F63E /* Model */,
@@ -207,6 +206,7 @@
 				EC04C6A3243471D50010AD0C /* Screen */,
 				EC775B772430545C0051F63E /* View */,
 				EC775B76243054510051F63E /* ViewModel */,
+				EC481E692439CBCA00454911 /* Utilities */,
 				EC775B7A2430591E0051F63E /* Assets */,
 			);
 			path = Weather;
