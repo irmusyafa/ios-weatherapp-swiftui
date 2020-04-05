@@ -1,5 +1,5 @@
 //
-//  ForecastWeatherElement.swift
+//  WeatherElement.swift
 //  Weather
 //
 //  Created by Irfan Rafii Musyafa on 04/04/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ForecastWeatherElement: Codable {
+struct WeatherElement: Codable {
     let id: Int
     let main, weatherDescription, icon: String
 

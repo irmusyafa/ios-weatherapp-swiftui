@@ -11,9 +11,9 @@ import Foundation
 struct ForecastWeather: Codable {
     let date: Int
     let mainValue: ForecastWeatherMainValue
-    let elements: [ForecastWeatherElement]
-    let clouds: ForecastWeatherClouds
-    let wind: ForecastWeatherWind
+    let elements: [WeatherElement]
+    let clouds: WeatherClouds
+    let wind: WeatherWind
 
     enum CodingKeys: String, CodingKey {
         case clouds, wind

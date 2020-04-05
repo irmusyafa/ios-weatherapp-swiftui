@@ -1,5 +1,5 @@
 //
-//  ForecastWeatherWind.swift
+//  WeatherClouds.swift
 //  Weather
 //
 //  Created by Irfan Rafii Musyafa on 04/04/20.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct ForecastWeatherWind: Codable {
-    let speed: Double
-    let deg: Int
+struct WeatherClouds: Codable {
+    let all: Int
 }
