@@ -1,5 +1,5 @@
 //
-//  Coordinat.swift
+//  Coordinate.swift
 //  Weather
 //
 //  Created by Irfan Rafii Musyafa on 05/04/20.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Coordinat: Codable {
+struct Coordinate: Codable {
     let lon, lat: Double
 }
