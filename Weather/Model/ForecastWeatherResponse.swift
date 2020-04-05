@@ -36,6 +36,10 @@ struct ForecastWeatherResponse: Codable {
         guard var before = list.first else {
             return result
         }
+        
+        if before.date.dateFromMilliseconds().dayWord() != Date().dayWord() {
+            result.append(before)
+        }
 
         for weather in list {
             if weather.date.dateFromMilliseconds().dayWord() != before.date.dateFromMilliseconds().dayWord() {
