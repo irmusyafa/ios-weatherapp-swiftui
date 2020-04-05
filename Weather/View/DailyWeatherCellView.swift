@@ -21,16 +21,24 @@ struct DailyWeatherCellView: View {
     var temperatureMin: String {
         return "\(Int(data.mainValue.tempMin))°"
     }
+    
+    var icon: String {
+        var image = "WeatherIcon"
+        if let weather = data.elements.first {
+            image = weather.icon
+        }
+        return image
+    }
 
     var body: some View {
         HStack {
             Text(day)
                 .frame(width: 150, alignment: .leading)
 
-            Image("WeatherIcon")
+            Image(icon)
                 .resizable()
-                .aspectRatio(UIImage(named: "WeatherIcon")!.size, contentMode: .fit)
-                .frame(width: 25, height: 25)
+                .aspectRatio(UIImage(named: icon)!.size, contentMode: .fit)
+                .frame(width: 30, height: 30)
 
             Spacer()
             Text(temperatureMax)

@@ -18,7 +18,15 @@ struct HourlyWeatherCellView: View {
     var temperature: String {
         return "\(Int(data.mainValue.temp))°"
     }
-    
+
+    var icon: String {
+        var image = "WeatherIcon"
+        if let weather = data.elements.first {
+            image = weather.icon
+        }
+        return image
+    }
+
     var body: some View {
         VStack {
             Text(hour)
@@ -29,10 +37,10 @@ struct HourlyWeatherCellView: View {
                           green: 1,
                           blue: 212/255)
                 )
-            Image("WeatherIcon")
+            Image(icon)
                 .resizable()
-                .aspectRatio(UIImage(named: "WeatherIcon")!.size, contentMode: .fit)
-                .frame(width: 25, height: 25)
+                .aspectRatio(UIImage(named: icon)!.size, contentMode: .fit)
+                .frame(width: 30, height: 30)
             Text(temperature)
         }.padding(.all, 0)
     }
