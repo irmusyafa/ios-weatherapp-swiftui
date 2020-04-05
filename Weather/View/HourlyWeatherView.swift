@@ -18,10 +18,7 @@ struct HourlyWeatherView: View {
                     HourlyWeatherCellView(data: data)
                     Spacer().frame(width: 24)
                 }
-            }.padding(
-                .init(arrayLiteral:.leading,.trailing),
-                24
-            )
+            }.padding(.horizontal, 24)
         }
     }
 }

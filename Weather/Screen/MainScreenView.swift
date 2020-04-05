@@ -36,6 +36,18 @@ struct ContentView: View {
 
                             DailyWeatherView(data: weatherViewModel.dailyWeathers)
                             Rectangle().frame(height: CGFloat(1))
+
+                            Text(weatherViewModel.currentDescription)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(
+                                    .init(arrayLiteral:.leading,.trailing),
+                                    24
+                                )
+                            Rectangle().frame(height: CGFloat(1))
+
+                            DetailsCurrentWeatherView(data: weatherViewModel.currentWeather)
+                            Rectangle().frame(height: CGFloat(1))
+
                         }
                     }
                     Spacer()

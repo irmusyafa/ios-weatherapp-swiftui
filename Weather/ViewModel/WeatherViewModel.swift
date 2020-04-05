@@ -41,6 +41,12 @@ class WeatherViewModel: ObservableObject {
             objectWillChange.send()
         }
     }
+    
+    var currentDescription = "" {
+        willSet {
+            objectWillChange.send()
+        }
+    }
         
     private var stateCurrentWeather = StateView.loading
     private var stateForecastWeather = StateView.loading
@@ -64,6 +70,7 @@ class WeatherViewModel: ObservableObject {
             if let currentWeather = currentWeather {
                 ws.currentWeather = currentWeather
                 ws.todayWeather = currentWeather.getForecastWeather()
+                ws.currentDescription = currentWeather.description()
                 ws.stateCurrentWeather = .success
             } else {
                 ws.stateCurrentWeather = .failed
@@ -83,7 +90,7 @@ class WeatherViewModel: ObservableObject {
             ws.updateStateView()
         }
     }
-    
+        
     private func updateStateView() {
         if stateCurrentWeather == .success, stateForecastWeather == .success {
             stateView = .success

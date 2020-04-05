@@ -36,6 +36,6 @@ struct LocationAndTemperatureHeaderView: View {
                 .font(.system(size: 86))
                 .fontWeight(.thin)
         }
-        .padding(.init(arrayLiteral: .top, .bottom), 24)
+        .padding(.vertical, 24)
     }
 }

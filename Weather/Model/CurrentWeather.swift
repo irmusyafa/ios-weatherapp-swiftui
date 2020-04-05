@@ -49,6 +49,15 @@ struct CurrentWeather: Codable {
         )
     }
     
+    func description() -> String {
+        var result = "Today: "
+        if let weatherElement = elements.first {
+            result += "\(weatherElement.weatherDescription.capitalizingFirstLetter()) currently. "
+        }
+        result += "It's \(mainValue.temp)°."
+        return result
+    }
+    
     func getForecastWeather() -> ForecastWeather {
         var result = ForecastWeather.emptyInit()
 

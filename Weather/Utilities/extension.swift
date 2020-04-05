@@ -32,4 +32,21 @@ extension Date {
         dateFormatter.dateFormat = "HH"
         return dateFormatter.string(from: self)
     }
+
+    func hourMinute() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH.mm"
+        return dateFormatter.string(from: self)
+    }
+
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
 }

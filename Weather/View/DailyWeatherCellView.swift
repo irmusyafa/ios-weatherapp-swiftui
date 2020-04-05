@@ -36,10 +36,7 @@ struct DailyWeatherCellView: View {
             Text(temperatureMax)
             Spacer().frame(width: 34)
             Text(temperatureMin)
-        }.padding(
-            .init(arrayLiteral:.leading,.trailing),
-            24
-        )
+        }.padding(.horizontal, 24)
     }
 }
 

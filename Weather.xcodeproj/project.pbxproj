@@ -31,6 +31,8 @@
 		EC775B7C243059530051F63E /* WeatherLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = EC775B7B243059530051F63E /* WeatherLogo.png */; };
 		EC7E01DF243A0E7000072F3B /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E01DE243A0E7000072F3B /* StateView.swift */; };
 		EC7E01E1243A10B200072F3B /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E01E0243A10B200072F3B /* ActivityIndicatorView.swift */; };
+		EC7E01E3243A1AA100072F3B /* DetailsCurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E01E2243A1AA100072F3B /* DetailsCurrentWeatherView.swift */; };
+		EC7E01E5243A233700072F3B /* DetailsCurrentWeatherCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7E01E4243A233700072F3B /* DetailsCurrentWeatherCellView.swift */; };
 		EC9431F2243A08A100F0345E /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9431F1243A08A100F0345E /* WeatherViewModel.swift */; };
 		ECBF87BB242AEE1B0004638B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF87BA242AEE1B0004638B /* AppDelegate.swift */; };
 		ECBF87BD242AEE1B0004638B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBF87BC242AEE1B0004638B /* SceneDelegate.swift */; };
@@ -65,6 +67,8 @@
 		EC775B7B243059530051F63E /* WeatherLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WeatherLogo.png; sourceTree = "<group>"; };
 		EC7E01DE243A0E7000072F3B /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		EC7E01E0243A10B200072F3B /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		EC7E01E2243A1AA100072F3B /* DetailsCurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCurrentWeatherView.swift; sourceTree = "<group>"; };
+		EC7E01E4243A233700072F3B /* DetailsCurrentWeatherCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCurrentWeatherCellView.swift; sourceTree = "<group>"; };
 		EC9431F1243A08A100F0345E /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		ECBF87B7242AEE1B0004638B /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBF87BA242AEE1B0004638B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				EC04C6A4243471F00010AD0C /* BackgroundView.swift */,
 				EC17BEBE24348D640030A904 /* DailyWeatherCellView.swift */,
 				EC17BEC42434A8320030A904 /* DailyWeatherView.swift */,
+				EC7E01E4243A233700072F3B /* DetailsCurrentWeatherCellView.swift */,
+				EC7E01E2243A1AA100072F3B /* DetailsCurrentWeatherView.swift */,
 				EC17BEC22434A4A70030A904 /* HourlyWeatherCellView.swift */,
 				EC17BEC02434A3E10030A904 /* HourlyWeatherView.swift */,
 				EC04C6A6243472D50010AD0C /* LocationAndTemperatureHeaderView.swift */,
@@ -291,6 +297,7 @@
 				EC11638F24382B0E0032E98A /* WeatherWind.swift in Sources */,
 				EC6DAA1624395EF4005F4C79 /* ForecastWeatherCity.swift in Sources */,
 				EC6DAA0C24395B4F005F4C79 /* CurrentWeather.swift in Sources */,
+				EC7E01E5243A233700072F3B /* DetailsCurrentWeatherCellView.swift in Sources */,
 				EC6DAA1024395CF6005F4C79 /* Coordinate.swift in Sources */,
 				EC11639124382B260032E98A /* WeatherClouds.swift in Sources */,
 				ECBF87BB242AEE1B0004638B /* AppDelegate.swift in Sources */,
@@ -312,6 +319,7 @@
 				EC6DAA1824396031005F4C79 /* OpenweatherAPIClient.swift in Sources */,
 				EC17BEC12434A3E10030A904 /* HourlyWeatherView.swift in Sources */,
 				EC6DAA1424395EB6005F4C79 /* ForecastWeatherResponse.swift in Sources */,
+				EC7E01E3243A1AA100072F3B /* DetailsCurrentWeatherView.swift in Sources */,
 				EC11638D24382AF50032E98A /* WeatherElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
