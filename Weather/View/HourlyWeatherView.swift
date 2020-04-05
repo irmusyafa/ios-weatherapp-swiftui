@@ -9,19 +9,15 @@
 import SwiftUI
 
 struct HourlyWeatherView: View {
+    let data: [ForecastWeather]
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                HourlyWeatherCellView()
-                Spacer().frame(width: 24)
-                HourlyWeatherCellView()
-                Spacer().frame(width: 24)
-                HourlyWeatherCellView()
-                Spacer().frame(width: 24)
-                HourlyWeatherCellView()
-                Spacer().frame(width: 24)
-                HourlyWeatherCellView()
-                Spacer().frame(width: 24)
+                ForEach(data) { data in
+                    HourlyWeatherCellView(data: data)
+                    Spacer().frame(width: 24)
+                }
             }.padding(
                 .init(arrayLiteral:.leading,.trailing),
                 24
@@ -32,6 +28,6 @@ struct HourlyWeatherView: View {
 
 struct HourlyWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        HourlyWeatherView()
+        HourlyWeatherView(data: [ForecastWeather.emptyInit()])
     }
 }

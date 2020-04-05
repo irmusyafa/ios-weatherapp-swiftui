@@ -9,10 +9,20 @@
 import SwiftUI
 
 struct HourlyWeatherCellView: View {
+    var data: ForecastWeather
+
+    var hour: String {
+        return data.date.dateFromMilliseconds().hour()
+    }
+
+    var temperature: String {
+        return "\(Int(data.mainValue.temp))°"
+    }
+    
     var body: some View {
         VStack {
-            Text("08")
-            Text("50%")
+            Text(hour)
+            Text("\(data.mainValue.humidity)%")
                 .font(.system(size: 12))
                 .foregroundColor(
                     .init(red: 127/255,
@@ -23,13 +33,13 @@ struct HourlyWeatherCellView: View {
                 .resizable()
                 .aspectRatio(UIImage(named: "WeatherIcon")!.size, contentMode: .fit)
                 .frame(width: 25, height: 25)
-            Text("27°")
+            Text(temperature)
         }.padding(.all, 0)
     }
 }
 
 struct HourlyWeatherCellView_Previews: PreviewProvider {
     static var previews: some View {
-        HourlyWeatherCellView()
+        HourlyWeatherCellView(data: ForecastWeather.emptyInit())
     }
 }

@@ -12,7 +12,7 @@ class OpenweatherAPIClient {
     typealias CurrentWeatherCompletionHandler = (CurrentWeather?, Error?) -> Void
     typealias ForecastWeatherCompletionHandler = (ForecastWeatherResponse?, Error?) -> Void
 
-    private let apiKey = "YOURAPIKEY"
+    private let apiKey = "42accc636f272622c88f7515ad38d8be"
     private let decoder = JSONDecoder()
     private let session: URLSession
 

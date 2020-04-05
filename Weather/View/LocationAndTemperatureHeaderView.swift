@@ -9,18 +9,30 @@
 import SwiftUI
 
 struct LocationAndTemperatureHeaderView: View {
-//    let data: CurrentWeatherViewModel
+    let data: CurrentWeather
+
+    var weatherName: String {
+        var result = ""
+        if let weather = data.elements.first {
+            result = weather.main
+        }
+        return result
+    }
+    
+    var temperature: String {
+        return "\(Int(data.mainValue.temp))°"
+    }
 
     var body: some View {
         VStack {
-            Text("Serpong")
+            Text(data.name)
                 .font(.largeTitle)
                 .fontWeight(.medium)
-            Text("Partly Cloudy")
+            Text(weatherName)
                 .font(.body)
                 .fontWeight(.light)
                 .padding(.bottom, 4)
-            Text("32°")
+            Text(temperature)
                 .font(.system(size: 86))
                 .fontWeight(.thin)
         }

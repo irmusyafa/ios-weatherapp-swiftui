@@ -9,27 +9,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var weatherViewModel = WeatherViewModel()
+    
     var body: some View {
         ZStack {
             BackgroundView()
             
             VStack {
-                LocationAndTemperatureHeaderView()
-                Spacer()
-
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack {
-                        DailyWeatherCellView(day: "Today")
-                        Rectangle().frame(height: 1)
-                        
-                        HourlyWeatherView()
-                        Rectangle().frame(height: 1)
-                        
-                        DailyWeatherView()
-                        Rectangle().frame(height: 1)
+                if weatherViewModel.stateView  == .loading {
+                    ActivityIndicatorView(isAnimating: true).configure {
+                        $0.color = .white
                     }
                 }
-                Spacer()
+                
+                if weatherViewModel.stateView  == .success {
+                    LocationAndTemperatureHeaderView(data: weatherViewModel.currentWeather)
+                    Spacer()
+
+                    ScrollView(.vertical, showsIndicators: false) {
+                        VStack {
+                            DailyWeatherCellView(data: weatherViewModel.todayWeather)
+                            Rectangle().frame(height: CGFloat(1))
+
+                            HourlyWeatherView(data: weatherViewModel.hourlyWeathers)
+                            Rectangle().frame(height: CGFloat(1))
+
+                            DailyWeatherView(data: weatherViewModel.dailyWeathers)
+                            Rectangle().frame(height: CGFloat(1))
+                        }
+                    }
+                    Spacer()
+                }
             }
         }.colorScheme(.dark)
     }

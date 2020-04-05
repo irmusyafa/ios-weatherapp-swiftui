@@ -9,9 +9,10 @@
 import Foundation
 
 struct ForecastWeatherMainValue: Codable {
-    let temp, feelsLike, tempMin, tempMax: Double
+    let temp, feelsLike: Double
+    var tempMin, tempMax: Double
     let pressure, seaLevel, grndLevel, humidity: Int
-    let tempKf: Int
+    let tempKf: Double
 
     enum CodingKeys: String, CodingKey {
         case temp

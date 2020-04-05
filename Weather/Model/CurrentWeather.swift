@@ -48,4 +48,18 @@ struct CurrentWeather: Codable {
             code: 0
         )
     }
+    
+    func getForecastWeather() -> ForecastWeather {
+        var result = ForecastWeather.emptyInit()
+
+        result.date = self.date
+        result.mainValue.tempMin = self.mainValue.tempMin
+        result.mainValue.tempMax = self.mainValue.tempMax
+
+        if let weatherElement = elements.first {
+            result.elements.append(weatherElement)
+        }
+
+        return result
+    }
 }

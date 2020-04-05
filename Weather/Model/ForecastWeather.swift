@@ -9,9 +9,9 @@
 import Foundation
 
 struct ForecastWeather: Codable {
-    let date: Int
-    let mainValue: ForecastWeatherMainValue
-    let elements: [WeatherElement]
+    var date: Int
+    var mainValue: ForecastWeatherMainValue
+    var elements: [WeatherElement]
     let clouds: WeatherClouds
     let wind: WeatherWind
 
@@ -31,4 +31,8 @@ struct ForecastWeather: Codable {
             wind: WeatherWind.emptyInit()
         )
     }
+}
+
+extension ForecastWeather: Identifiable {
+    var id: String { "\(date)" }
 }

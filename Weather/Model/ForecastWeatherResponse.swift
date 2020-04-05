@@ -30,4 +30,20 @@ struct ForecastWeatherResponse: Codable {
             city: ForecastWeatherCity.emptyInit()
         )
     }
+    
+    var dailyList: [ForecastWeather] {
+        var result: [ForecastWeather] = []
+        guard var before = list.first else {
+            return result
+        }
+
+        for weather in list {
+            if weather.date.dateFromMilliseconds().dayWord() != before.date.dateFromMilliseconds().dayWord() {
+                result.append(weather)
+            }
+            before = weather
+        }
+
+        return result
+    }
 }

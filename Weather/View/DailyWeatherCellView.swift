@@ -9,7 +9,18 @@
 import SwiftUI
 
 struct DailyWeatherCellView: View {
-    let day: String
+    let data: ForecastWeather
+    
+    var day: String {
+        return data.date.dateFromMilliseconds().dayWord()
+    }
+    var temperatureMax: String {
+        return "\(Int(data.mainValue.tempMax))°"
+    }
+
+    var temperatureMin: String {
+        return "\(Int(data.mainValue.tempMin))°"
+    }
 
     var body: some View {
         HStack {
@@ -22,9 +33,9 @@ struct DailyWeatherCellView: View {
                 .frame(width: 25, height: 25)
 
             Spacer()
-            Text("32°")
+            Text(temperatureMax)
             Spacer().frame(width: 34)
-            Text("24°")
+            Text(temperatureMin)
         }.padding(
             .init(arrayLiteral:.leading,.trailing),
             24
@@ -34,6 +45,6 @@ struct DailyWeatherCellView: View {
 
 struct DailyWeatherCellView_Previews: PreviewProvider {
     static var previews: some View {
-        DailyWeatherCellView(day: "Wednesday")
+        DailyWeatherCellView(data: ForecastWeather.emptyInit())
     }
 }
