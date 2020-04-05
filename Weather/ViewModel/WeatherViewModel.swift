@@ -44,11 +44,22 @@ class WeatherViewModel: ObservableObject {
         
     private var stateCurrentWeather = StateView.loading
     private var stateForecastWeather = StateView.loading
+    private let cityId = "1627459" // Serpong City Id
 
     init() {
-        let serpongCityId = "1627459"
-
-        client.getCurrentWeather(at: serpongCityId) { [weak self] currentWeather, error in
+        getData()
+    }
+    
+    func retry() {
+        stateView = .loading
+        stateCurrentWeather = .loading
+        stateForecastWeather = .loading
+        
+        getData()
+    }
+    
+    private func getData() {
+        client.getCurrentWeather(at: cityId) { [weak self] currentWeather, error in
             guard let ws = self else { return }
             if let currentWeather = currentWeather {
                 ws.currentWeather = currentWeather
@@ -60,7 +71,7 @@ class WeatherViewModel: ObservableObject {
             ws.updateStateView()
         }
 
-        client.getForecastWeather(at: serpongCityId) { [weak self] forecastWeatherResponse, error in
+        client.getForecastWeather(at: cityId) { [weak self] forecastWeatherResponse, error in
             guard let ws = self else { return }
             if let forecastWeatherResponse = forecastWeatherResponse {
                 ws.hourlyWeathers = forecastWeatherResponse.list

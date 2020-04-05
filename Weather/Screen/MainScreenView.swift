@@ -40,6 +40,15 @@ struct ContentView: View {
                     }
                     Spacer()
                 }
+                
+                if weatherViewModel.stateView == .failed {
+                    Button(action: {
+                        self.weatherViewModel.retry()
+                    }) {
+                        Text("Failed get data, retry?")
+                            .foregroundColor(.white)
+                    }
+                }
             }
         }.colorScheme(.dark)
     }
