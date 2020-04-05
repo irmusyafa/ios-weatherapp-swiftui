@@ -5,7 +5,7 @@
 
 ## Overview
 
-iOS WeatherApp is copy from apple weather app uses Openweathermap API and build with SwiftUI. Feature this app same with apple weather like get current weather & details, get hourly forecast weather and get daily forecast. But detail not fully some because limition free plan from Openweathermap.
+`iOS WeatherApp` is copy design from `Apple Weather App` uses [Openweathermap API](https://openweathermap.org/api) and build with SwiftUI. Feature this app same with apple weather like get current weather & details, get hourly forecast weather and get daily forecast. But detail not fully same because limited feature free plan from Openweathermap API.
 
 ### Keyword
 - SwiftUI
@@ -47,6 +47,8 @@ class WeatherViewModel: ObservableObject {
 
 ## Thanks to
 
-Inspiring project from [Weather-SwiftUI](https://github.com/bobbyconti/Weather-SwiftUI)
+Apple amazing library [SwiftUI](https://developer.apple.com/xcode/swiftui/)
 
-Open API from [OpenWeatherMap](https://openweathermap.org)
+Open API from [OpenWeatherMap](https://openweathermap.org/api)
+
+Inspiring project from [Weather-SwiftUI](https://github.com/bobbyconti/Weather-SwiftUI)
