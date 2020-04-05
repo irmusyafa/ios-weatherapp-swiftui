@@ -21,8 +21,8 @@ class OpenweatherAPIClient {
         case currentWeather = "weather"
     }
         
-    private func baseUrl(_ suffixURL: SuffixURL) -> URL {
-        return URL(string: "https://api.openweathermap.org/data/2.5/\(suffixURL.rawValue)?APPID=\(self.apiKey)/&units=metric")!
+    private func baseUrl(_ suffixURL: SuffixURL, param: String) -> URL {
+        return URL(string: "https://api.openweathermap.org/data/2.5/\(suffixURL.rawValue)?APPID=\(self.apiKey)&units=metric\(param)")!
     }
         
     init(configuration: URLSessionConfiguration) {
@@ -37,11 +37,7 @@ class OpenweatherAPIClient {
                                             suffixURL: SuffixURL,
                                             completionHandler completion:  @escaping (_ object: T?,_ error: Error?) -> ()) {
         
-        guard let url = URL(string: "&id=\(cityId)", relativeTo: baseUrl(suffixURL)) else {
-            completion(nil, ResponseError.invalidURL)
-            return
-        }
-        
+        let url = baseUrl(suffixURL, param: "&id=\(cityId)")
         let request = URLRequest(url: url)
         
         let task = session.dataTask(with: request) { data, response, error in

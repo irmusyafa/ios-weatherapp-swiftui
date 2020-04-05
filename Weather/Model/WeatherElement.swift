@@ -17,4 +17,13 @@ struct WeatherElement: Codable {
         case weatherDescription = "description"
         case icon
     }
+    
+    static func emptyInit() -> WeatherElement {
+        return WeatherElement(
+            id: 0,
+            main: "",
+            weatherDescription: "",
+            icon: ""
+        )
+    }
 }

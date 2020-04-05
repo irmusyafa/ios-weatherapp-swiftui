@@ -21,4 +21,14 @@ struct ForecastWeather: Codable {
         case date = "dt"
         case elements = "weather"
     }
+    
+    static func emptyInit() -> ForecastWeather {
+        return ForecastWeather(
+            date: 0,
+            mainValue: ForecastWeatherMainValue.emptyInit(),
+            elements: [],
+            clouds: WeatherClouds.emptyInit(),
+            wind: WeatherWind.emptyInit()
+        )
+    }
 }

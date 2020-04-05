@@ -30,4 +30,22 @@ struct CurrentWeather: Codable {
         case date = "dt"
         case code = "cod"
     }
+    
+    static func emptyInit() -> CurrentWeather {
+        return CurrentWeather(
+            timezone: 0,
+            id: 0,
+            name: "",
+            coordinate: Coordinate.emptyInit(),
+            elements: [],
+            base: "",
+            mainValue: CurrentWeatherMainValue.emptyInit(),
+            visibility: 0,
+            wind: WeatherWind.emptyInit(),
+            clouds: WeatherClouds.emptyInit(),
+            date: 0,
+            sys: CurrentWeatherSys.emptyInit(),
+            code: 0
+        )
+    }
 }

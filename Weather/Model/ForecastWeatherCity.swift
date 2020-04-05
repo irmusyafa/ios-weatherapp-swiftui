@@ -20,4 +20,16 @@ struct ForecastWeatherCity: Codable {
         case coordinate = "coord"
         case country, timezone, sunrise, sunset
     }
+    
+    static func emptyInit() -> ForecastWeatherCity {
+        return ForecastWeatherCity(
+            id: 0,
+            name: "",
+            coordinate: Coordinate.emptyInit(),
+            country: "",
+            timezone: 0,
+            sunrise: 0,
+            sunset: 0
+        )
+    }
 }

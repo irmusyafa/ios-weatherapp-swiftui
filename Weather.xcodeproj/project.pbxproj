@@ -19,6 +19,7 @@
 		EC17BEC32434A4A70030A904 /* HourlyWeatherCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17BEC22434A4A70030A904 /* HourlyWeatherCellView.swift */; };
 		EC17BEC52434A8320030A904 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17BEC42434A8320030A904 /* DailyWeatherView.swift */; };
 		EC17BEC72434B2EC0030A904 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC17BEC62434B2EC0030A904 /* HostingController.swift */; };
+		EC32D4902439A4CD002BE11A /* WeatherNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC32D48F2439A4CD002BE11A /* WeatherNetworkManager.swift */; };
 		EC6DAA0C24395B4F005F4C79 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAA0B24395B4F005F4C79 /* CurrentWeather.swift */; };
 		EC6DAA0E24395C52005F4C79 /* CurrentWeatherMainValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAA0D24395C52005F4C79 /* CurrentWeatherMainValue.swift */; };
 		EC6DAA1024395CF6005F4C79 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6DAA0F24395CF6005F4C79 /* Coordinate.swift */; };
@@ -49,6 +50,7 @@
 		EC17BEC22434A4A70030A904 /* HourlyWeatherCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCellView.swift; sourceTree = "<group>"; };
 		EC17BEC42434A8320030A904 /* DailyWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 		EC17BEC62434B2EC0030A904 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		EC32D48F2439A4CD002BE11A /* WeatherNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherNetworkManager.swift; sourceTree = "<group>"; };
 		EC6DAA0B24395B4F005F4C79 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		EC6DAA0D24395C52005F4C79 /* CurrentWeatherMainValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherMainValue.swift; sourceTree = "<group>"; };
 		EC6DAA0F24395CF6005F4C79 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				EC6DAA1724396031005F4C79 /* OpenweatherAPIClient.swift */,
 				EC6DAA1924396C89005F4C79 /* ResponseError.swift */,
+				EC32D48F2439A4CD002BE11A /* WeatherNetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				EC116388243823EE0032E98A /* ForecastWeather.swift in Sources */,
 				EC6DAA0E24395C52005F4C79 /* CurrentWeatherMainValue.swift in Sources */,
 				ECBF87BD242AEE1B0004638B /* SceneDelegate.swift in Sources */,
+				EC32D4902439A4CD002BE11A /* WeatherNetworkManager.swift in Sources */,
 				EC04C6A5243471F00010AD0C /* BackgroundView.swift in Sources */,
 				EC6DAA1224395E23005F4C79 /* CurrentWeatherSys.swift in Sources */,
 				EC04C6A7243472D50010AD0C /* LocationAndTemperatureHeaderView.swift in Sources */,

@@ -20,4 +20,14 @@ struct ForecastWeatherResponse: Codable {
         case count = "cnt"
         case list, city
     }
+    
+    static func emptyInit() -> ForecastWeatherResponse {
+        return ForecastWeatherResponse(
+            code: "",
+            message: 0,
+            count: 0,
+            list: [],
+            city: ForecastWeatherCity.emptyInit()
+        )
+    }
 }

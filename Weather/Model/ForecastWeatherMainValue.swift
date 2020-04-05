@@ -24,4 +24,18 @@ struct ForecastWeatherMainValue: Codable {
         case humidity
         case tempKf = "temp_kf"
     }
+    
+    static func emptyInit() -> ForecastWeatherMainValue {
+        return ForecastWeatherMainValue(
+            temp: 0.0,
+            feelsLike: 0.0,
+            tempMin: 0.0,
+            tempMax: 0.9,
+            pressure: 0,
+            seaLevel: 0,
+            grndLevel: 0,
+            humidity: 0,
+            tempKf: 0
+        )
+    }
 }
